@@ -1,4 +1,22 @@
- <html>
-        <p>Hi there!</p>
-        <p>It works!</p>
-    </html>
+  <html>
+  <head>
+  	<title>SuHyeon's blog</title>
+  </head>
+  <body>
+  	<div>
+  		<h1><a href="/">Django Girls Blog</a></h1>
+  	</div>
+
+  	{% for post in posts %}
+  	<div>
+  		<p>published: {{ post.published_date }}</p>
+  		<h1><a href="">{{ post.title }}</a></h1>
+  		<p>{{ post.text|linebreaks }}</p>
+  	</div>
+  	{% endfor %}
+  	<h1>A heading</h1>
+  	<p>Hi there!</p>
+  	<p>It works!</p>
+  	<p>Welcome!</p>
+  </body>
+  </html>
